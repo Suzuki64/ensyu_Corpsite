@@ -1,0 +1,258 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+.contact-btn {
+  width: 300px;
+  padding: 15px 0;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(197, 36, 36);
+}
+
+.contact-btn:hover {
+  opacity: 0.5;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  box-sizing: border-box;
+  padding: 30px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+}
+
+.header_logo {
+  font-size: 24px;
+}
+
+.header_nav {
+  width: 630px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 15px;
+}
+
+.header_menu {
+  display: none;
+}
+
+.header_nav-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.headersheet {
+  height: 60px;
+  background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .header_menu {
+    display: inline-block;
+    width: 38px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    margin-right: 20px;
+  }
+
+  .header_menu-top,
+  .header_menu-middle,
+  .header_menu-bottom {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    transition: 0.5s;
+  }
+
+  .header_menu-top {
+    top: 0%;
+  }
+
+  .header_menu-middle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .header_menu-bottom {
+    bottom: 0%;
+  }
+
+  .header_menu.open span:nth-of-type(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .header_menu.open span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .header_menu.open span:nth-of-type(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+
+  .header_nav {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    background: white;
+    transition: .7s;
+    display: block;
+    z-index: 3;
+    color: blue;
+    font-weight: lighter;
+    padding-top: 100px;
+  }
+
+  .header_nav-item {
+    margin: 30px;
+  }
+
+  .header_nav-item:last-child {
+    margin-right: 30px;
+  }
+
+  .header_nav.in {
+    transform: translateX(100%);
+  }
+}
+
+.headersheet {
+  height: 60px;
+  background-color: white;
+}
+
+.ttl {
+  height: 28vh;
+  background-image: url(../img/mv.png);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 90px;
+}
+
+.news {
+  padding: 30px 0 60px;
+}
+
+.news_contents {
+  width: 75%;
+  margin: 0 auto 0;
+}
+
+.news_contents-list {
+  padding: 25px 20px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.news_contents-list span {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px){
+  .news_contents {
+    width: 90%;
+    margin: 0 auto 0;
+  }
+  .news_contents-list {
+    padding: 13px 20px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+  }
+}
+
+.contact {
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 90px;
+}
+
+.contact_ttl {
+  margin-bottom: 20px;
+}
+
+.contact_text {
+  margin-bottom: 40px;
+  line-height: 25px;
+}
+
+.footer {
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+}
+
+.footer_nav {
+  display: flex;
+  list-style: none;
+}
+
+.footer_nav-item:not(:last-child) {
+  padding-right: 15px;
+  margin-right: 15px;
+  border-right: 1px solid white;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    justify-content: space-around;
+  }
+
+  .footer_nav {
+    display: block;
+    text-align: center;
+  }
+
+  .footer_nav-item:not(:last-child) {
+    border: none;
+  }
+
+  .footer_nav-item:last-child {
+    padding-right: 15px;
+    margin-right: 15px;
+  }
+
+  .footer_nav-item {
+    margin: 15px auto;
+  }
+}
